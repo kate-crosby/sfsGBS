@@ -34,4 +34,6 @@ Use vcftools (can use plink too) to calculate allele frequency counts (note this
 Append .txt to the all_chr_GBS_SFS_analysis.frq file and rename column headers in vi.
 
 
-Reformat data further with R and plot, see 'sfs.R' 
+Reformat data further with R and plot, see 'sfs.R' Note - this is the **FOLDED** sfs with GBS data. I don't think there's any Tripsacum included here. May need to double check that.
+
+
