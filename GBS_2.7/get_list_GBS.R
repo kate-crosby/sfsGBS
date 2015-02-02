@@ -24,4 +24,4 @@ keep_list <- subset(dt.u, select = "FullName")
 
 write.table(keep_list, "keep_list.txt")
 
-write.csv(keep_list, "keep_list.csv", row.names=F)
+write.csv(keep_list, "keep_list.csv")
