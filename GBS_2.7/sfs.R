@@ -66,4 +66,4 @@ ind.minor <- round(ind.minor, digits = 0)
 sfs <- data.frame(sfs, ind.minor, ind.major)
 
 # Because Tim likes the 'base' package - ps. this is the folded site frequency spectrum
-hist(ind.minor)
+hist(ind.minor, main="Folded SFS with GBS v.2.7", xlab="Minor Allele Frequency")
