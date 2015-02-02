@@ -46,4 +46,5 @@ done
 
 - I appended headers to seven column output (should be 6 but the data is not perfect) -so the seventh is the column where a site was not perfectly imputed (in this case if there is a seventh column a frequency was way less than 0.01 of the total allele frequency at a site - I ran with it). I cut the seventh column and wrote as new.txt. This file gets passed to the ["sfs.R"](https://github.com/kate-crosby/sfsGBS/blob/master/GBS_2.7/sfs.R)
 
-- That's it. Folded SFS is the last line of the script.
+- That's it. Folded SFS is the last line of the script. Plot below:
+[SFS folded plot]: https://github.com/kate-crosby/sfsGBS/blob/master/GBS_2.7/SFS_2.7.pdf
