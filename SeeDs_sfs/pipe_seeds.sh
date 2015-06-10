@@ -1,16 +1,3 @@
-#!/bin/bash -l
-#SBATCH -D /home/kcrosby/seeds/
-#SBATCH -o /home/kcrosby/seeds/logs/out_log-%j.txt
-#SBATCH -e /home/kcrosby/seeds/logs/err_log-%j.txt
-#SBATCH -J tasselplk
-#SBATCH --mail-type=END
-#SBATCH --mail-user=kcrosby@ucdavis.edu
-#SBATCH -p bigmemh
-#SBATCH --ntasks=8
-set -e
-set -u
-set -o pipefail
-
 module load gcc jdk/1.8 tassel/5
 
 
@@ -99,7 +86,7 @@ done
 
 ## Remove any sites with more than 2 alleles but keep the singleton
 
-for file in *.vcf
+for file in *.gz
 do
         echo "$file: " $(~/bin/vcftools_0.1.12b/bin/vcftools --vcf $file --max-alleles 2 --recode --out min1_$file)
 done
