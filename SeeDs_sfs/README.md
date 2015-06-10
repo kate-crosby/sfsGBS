@@ -1,7 +1,7 @@
 ## New sfs file with SeeDs data
 
-- To be used with [Reed Cartright's and Jeff's working paper] (https://github.com/rossibarra/SOFOStex) on resampling/rescaling the sfs when unequal sample size of loci, individuals, populations are a problem.
-
+- OPV landraces from Alberto Romero and CIMMYT. Used to estimate effective population size.
+- 
 ### Steps to get the folded sfs
 
 - Ask for the data - comes in hmp.txt.zip format. Gzip and then run tassel 5 to sort the genotypes: 
@@ -12,6 +12,11 @@ do
         echo "$file: " $(run_pipeline.pl -Xmx64g -SortGenotypeFilePlugin -inputFile $file -outputFile sortedGBS$file -fileType Hapmap)
 done
 ```
+
+Run a short script in R to produce a list of unique values, from the metadata information
+```
+```
+
 Unzip the files, cut the strand column because it's unnecessary for sfs - and recode indels from +/- to 0 for tassel
 
 ```
